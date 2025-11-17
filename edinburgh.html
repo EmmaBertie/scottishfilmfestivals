@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edinburgh</title>
+    <link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/035bc74572.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--including navigation and logo-->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="website logo">
+        </div>
+        <div class="header_text">
+            <h1>Scottish Film Festivals</h1>
+        </div>      
+    
+<div class="dropdown">
+  <button class="dropbtn" id="dropdownToggle">Menu</button>
+      <div class="dropdown_content" id="dropdownMenu">
+
+        <a href="glasgow.html">Glasgow</a>
+        <a href="index.html">Home</a>
+        <a href="shetland.html">Shetland</a>
+        <a href="hippfest.html">Hippfest</a>
+        <a href="hebrides.html">Hebrides</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="info.html">Info</a>
+      </div>
+</div>
+    </header>
+<section class="main">
+<!--start of main section-->
+<h2>The Edinburgh Film Festival</h2>
+<p>The Edinburgh International Film Festival (EIFF), founded in 1947, is the world's 
+  oldest continually running film festival and remains a cornerstone of global cinema 
+  culture. Held annually in August, the festival showcases an eclectic mix of world 
+  premieres, UK debuts, documentaries, shorts, and experimental works, alongside 
+  retrospectives that celebrate film history. Known for its intimate yet ambitious 
+  approach, EIFF has introduced audiences to groundbreaking talent and hosted iconic 
+  premieres such as Blade Runner, Alien, and The Hurt Locker. Beyond screenings, 
+  the festival features industry panels, Q&A sessions, and networking events, 
+  attracting filmmakers, critics, and enthusiasts from around the world to Edinburgh's 
+  vibrant cultural scene</p>
+<br>
+<h4>Highlights from the 2025 festival</h4>
+   
+        
+<div class="slider">
+  <div class="slides" id="slides">
+    <img src="images/edinburgh_1.jpg" alt="a theatre of people looking at a screen">
+    <img src="images/edinburgh_2.jpg" alt="a person on a beach holding a clackerboard">
+    <img src="images/edinburgh_3.jpg" alt="an aerial view of Edinburgh landscape">
+    <img src="images/edinburgh_4.jpg" alt="an aerial view of Edinburgh castle">
+    <img src="images/edinburgh_5.jpg" alt="a phone box on Edinburgh's Royal Mile">
+</div>
+</div>
+<div class="controls">
+  <button onclick="prevSlide()">Previous</button>
+  <button onclick="nextSlide()">Next</button>
+</div>
+    
+</section>
+<div class="gff_link">
+      <a href="https://www.edfilmfest.org/">To visit the EFF website click here</a>
+</div>
+
+<!--end of main content-->
+<footer class="site_footer">
+    <!--contact and links to social media-->
+    <div class="foot_address"><p>Scottish Film Festivals</p>
+        <p>Scotland Road</p>
+        <p>Scotland</p>
+    </div>
+    <div class="foot_contact"><p>Phone: 01417771234</p>
+        <p>Email: contact@scottishfilmfestivals.com</p>
+    </div>
+    <div class="copyright"><p>All Content &copy; Scottish Film Festivals 2025</p></div>
+    <div class="socials">
+         <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+         <a href="https://www.facebook.com/" target="blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+         <a href="https://x.com/?lang=en-gb" target="blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('dropdownToggle');
+    const menu = document.getElementById('dropdownMenu');
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        menu.classList.toggle('show');
+      });
+
+      window.addEventListener('click', function (event) {
+        if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+          menu.classList.remove('show');
+        }
+      });
+    }
+  });
+</script>
+
+
+<script>
+  let index = 0;
+  const slides = document.getElementById('slides');
+  const totalSlides = slides.children.length;
+
+  function showSlide() {
+    const slideWidth = slides.children[0].offsetWidth;
+    slides.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
+
+  function nextSlide() {
+    index = (index + 1) % totalSlides;
+    showSlide();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + totalSlides) % totalSlides;
+    showSlide();
+  }
+  
+</script>
+
+
+</body>
+</html>

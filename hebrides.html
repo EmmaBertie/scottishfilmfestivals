@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hebrides</title>
+    <link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/035bc74572.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--including navagation and logo-->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="website logo">
+        </div>
+        <div class="header_text">
+            <h1>Scottish Films Festivals</h1>
+        </div>      
+    
+<div class="dropdown">
+  <button class="dropbtn" id="dropdownToggle">Menu</button>
+      <div class="dropdown_content" id="dropdownMenu">
+        <a href="index.html">Home</a>
+        <a href="glasgow.html">Glasgow</a>
+        <a href="edinburgh.html">Edinburgh</a>
+        <a href="shetland.html">Shetland</a>
+        <a href="hippfest.html">Hippfest</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="info.html">Info</a>
+      </div>
+</div>
+    </header>
+<section class="main">
+<!--start of main section-->
+<h2>The Hebrides International Film Festival</h2>
+<p>The Hebrides International Film Festival (HIFF) is Scotland's leading island-based 
+  film event, held annually across the Outer Hebrides, including Lewis, Harris, Uist, 
+  and Barra. Founded to bring independent cinema to remote communities, HIFF showcases 
+  a curated selection of international dramas, documentaries, and short films, often 
+  themed around environmental issues and island life. Screenings take place in local 
+  venues and arts centres such as An Lanntair in Stornoway, complemented by Q&A sessions, 
+  masterclasses, and outdoor activities like wildlife walks and beach cleans. 
+  Recent editions have focused on climate action and sustainable rural living, 
+  offering audiences unique perspectives on global challenges while celebrating the 
+  cultural richness of the Hebrides.</p>
+<br>
+<h4>Highlights from the 2025 festival</h4>
+   
+        
+<div class="slider">
+  <div class="slides" id="slides">
+    <img src="images/hebrides_1.jpg" alt="a seal on the beach">
+    <img src="images/hebrides_2.jpg" alt="thatched houses in a field">
+    <img src="images/hebrides_3.jpg" alt="rowing boats moored on a beach">
+    <img src="images/hebrides_4.jpg" alt="traditional houses with flowers in the foreground">
+    <img src="images/hebrides_5.jpg" alt="standing stones">
+</div>
+</div>
+<div class="controls">
+  <button onclick="prevSlide()">Previous</button>
+  <button onclick="nextSlide()">Next</button>
+</div>
+
+<div class="hebfest_list">
+  <br>
+  <h3>Categories of film you can view at the festival</h3>
+  <ul style="list-style: none;">
+    <li>Documentaries</li>
+    <li>Dramas</li>
+    <li>Short films</li>
+    <li>Children and family films</li>
+  </ul>
+</div>
+</section>
+<div class="gff_link">
+      <a href="https://hebfilmfestival.org/hebrides-international-film-festival">To visit the Hebrides International Film Festival website click here</a>
+</div>
+
+<!--end of main content-->
+<footer class="site_footer">
+    <!--contact and links to social media-->
+    <div class="foot_address"><p>Scottish Film Festivals</p>
+        <p>Scotland Road</p>
+        <p>Scotland</p>
+    </div>
+    <div class="foot_contact"><p>Phone: 01417771234</p>
+        <p>Email: contact@scottishfilmfestivals.com</p>
+    </div>
+    <div class="copyright"><p>All Content &copy; Scottish Film Festivals 2025</p></div>
+    <div class="socials">
+         <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+         <a href="https://www.facebook.com/" target="blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+         <a href="https://x.com/?lang=en-gb" target="blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('dropdownToggle');
+    const menu = document.getElementById('dropdownMenu');
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        menu.classList.toggle('show');
+      });
+
+      window.addEventListener('click', function (event) {
+        if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+          menu.classList.remove('show');
+        }
+      });
+    }
+  });
+</script>
+
+
+<script>
+  let index = 0;
+  const slides = document.getElementById('slides');
+  const totalSlides = slides.children.length;
+
+  function showSlide() {
+    const slideWidth = slides.children[0].offsetWidth;
+    slides.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
+
+  function nextSlide() {
+    index = (index + 1) % totalSlides;
+    showSlide();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + totalSlides) % totalSlides;
+    showSlide();
+  }
+  
+</script>
+
+
+</body>
+</html>

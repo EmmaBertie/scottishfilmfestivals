@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glasgow</title>
+    <link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/035bc74572.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--including navagation and logo-->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="website logo">
+        </div>
+        <div class="header_text">
+            <h1>Scottish Film Festivals</h1>
+        </div>      
+    
+<div class="dropdown">
+  <button class="dropbtn" id="dropdownToggle">Menu</button>
+      <div class="dropdown_content" id="dropdownMenu">
+        <a href="index.html">Home</a>
+        <a href="edinburgh.html">Edinburgh</a>
+        <a href="shetland.html">Shetland</a>
+        <a href="hippfest.html">Hippfest</a>
+        <a href="hebrides.html">Hebrides</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="info.html">Info</a>
+      </div>
+</div>
+    </header>
+<section class="main">
+<!--start of main section-->
+<h2>The Glasgow Film Festival</h2>
+<p>The Glasgow Film Festival (GFF), founded in 2005, has grown into one of the UK's 
+  most celebrated film events, known for its welcoming atmosphere and diverse programming. 
+  Held annually across various venues in Glasgow, with the historic Glasgow Film Theatre as 
+  its centerpiece, the festival showcases a rich mix of international cinema, 
+  Scottish premieres, and independent films. GFF is especially praised for its 
+  audience-focused approach, offering retrospectives, industry talks, and unique screenings
+  —including events at unconventional locations like indoor ski slopes. 
+  With over 40,000 attendees each year, the festival continues to be a vital platform 
+  for emerging talent and a beloved cultural highlight in Scotland's creative calendar.</p>
+</section>
+<!--video here-->
+<section class="main_video">
+    <h4>Highlights from the 2025 festival</h4>
+          <img src="images/main_page_image.jpg" alt="fireworks" style="width: 400px; height: 300px;">        
+    <div class="gff_link">
+      <a href="https://www.glasgowfilmfest.org/home">To visit the GFF website click here</a>
+    </div>
+       
+</section>
+
+<!--end of main content-->
+<footer class="site_footer">
+    <!--contact and links to social media-->
+    <div class="foot_address"><p>Scottish Film Festivals</p>
+        <p>Scotland Road</p>
+        <p>Scotland</p>
+    </div>
+    <div class="foot_contact"><p>Phone: 01417771234</p>
+        <p>Email: contact@scottishfilmfestivals.com</p>
+    </div>
+    <div class="copyright"><p>All Content &copy; Scottish Film Festivals 2025</p></div>
+    <div class="socials">
+         <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+         <a href="https://www.facebook.com/" target="blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+         <a href="https://x.com/?lang=en-gb" target="blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('dropdownToggle');
+    const menu = document.getElementById('dropdownMenu');
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        menu.classList.toggle('show');
+      });
+
+      window.addEventListener('click', function (event) {
+        if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+          menu.classList.remove('show');
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

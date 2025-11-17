@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm</title>
+    <link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/035bc74572.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--including navagation and logo-->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="website logo">
+        </div>
+        <div class="header_text">
+            <h1>Scottish Film Festivals</h1>
+        </div>      
+    
+<div class="dropdown">
+  <button class="dropbtn" id="dropdownToggle">Menu</button>
+      <div class="dropdown_content" id="dropdownMenu">
+        <a href="index.html">Home</a>
+        <a href="glasgow.html">Glasgow</a>
+        <a href="shetland.html">Shetland</a>
+        <a href="hippfest.html">Hippfest</a>
+        <a href="hebrides.html">Hebrides</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="info.html">Info</a>
+      </div>
+</div>
+    </header>
+        <!--start of confirm content-->
+<div style="background:#72BAA9; padding:40px;">
+        <h1>Confirmation</h1>
+        <br>
+        <p>Thanks for your enquiry.</p>
+        <br>
+        <p>A member of the team will be in touch shortly.</p>
+        <br>
+        <!--end of contact content-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d8957.00581738664!2d-4.261325377192069!3d55.85830356295962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sG1%201AA!5e0!3m2!1sen!2suk!4v1748369997989!5m2!1sen!2suk" 
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+    <footer class="site_footer">
+    <!--contact and links to social media-->
+    <div class="foot_address"><p>Scottish Film Festivals</p>
+        <p>Scotland Road</p>
+        <p>Scotland</p>
+    </div>
+    <div class="foot_contact"><p>Phone: 01417771234</p>
+        <p>Email: contact@scottishfilmfestivals.com</p>
+    </div>
+    <div class="copyright"><p>All Content &copy; Scottish Film Festivals 2025</p></div>
+    <div class="socials">
+         <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+         <a href="https://www.facebook.com/" target="blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+         <a href="https://x.com/?lang=en-gb" target="blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('dropdownToggle');
+    const menu = document.getElementById('dropdownMenu');
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        menu.classList.toggle('show');
+      });
+
+      window.addEventListener('click', function (event) {
+        if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+          menu.classList.remove('show');
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>

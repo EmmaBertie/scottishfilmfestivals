@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shetland</title>
+    <link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/035bc74572.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--including navagation and logo-->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="website logo">
+        </div>
+        <div class="header_text">
+            <h1>Scottish Film Festivals</h1>
+        </div>      
+    
+<div class="dropdown">
+  <button class="dropbtn" id="dropdownToggle">Menu</button>
+      <div class="dropdown_content" id="dropdownMenu">
+        <a href="index.html">Home</a>
+        <a href="glasgow.html">Glasgow</a>
+        <a href="edinburgh.html">Edinburgh</a>
+        <a href="hippfest.html">Hippfest</a>
+        <a href="hebrides.html">Hebrides</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="info.html">Info</a>
+      </div>
+</div>
+    </header>
+<section class="main">
+<!--start of main section-->
+<h2>Screenplay - Shetland's Annual Film Festival</h2>
+<p>The Shetland Film Festival, called Screenplay, is celebrated as Britain's 
+  most northerly film festival and has been a cornerstone of Shetland's 
+  cultural calendar since its founding in 2006. Traditionally curated by renowned 
+  film critic Mark Kermode and historian Linda Ruth Williams, the festival takes 
+  place at Mareel, Shetland's state-of-the-art cinema and arts venue, with events 
+  across the islands. Screenplay offers an eclectic mix of international and local films, 
+  themed screenings, and categories such as Look North and Home Made, which showcase 
+  work by Shetland filmmakers. Alongside screenings, the festival features workshops, 
+  lectures, and Q&A sessions with industry professionals, creating a vibrant space for 
+  film lovers and fostering community engagement. Although the festival concluded its 
+  last edition in 2023, discussions are underway to introduce new cinematic events 
+  to continue Shetland's rich tradition of celebrating film.</p>
+<br>
+<h4>Highlights from the 2023 festival</h4>
+   
+        
+<div class="slider">
+  <div class="slides" id="slides">
+    <img src="images/shetlands_1.jpg" alt="signpost showing John O'Groats">
+    <img src="images/shetlands_2.jpg" alt="a view of the beach leading to the sea">
+    <img src="images/shetlands_3.jpg" alt="a puffin standing on a hillside">
+    <img src="images/shetlands_4.jpg" alt="a lighthouse">
+    <img src="images/shetlands_5.jpg" alt="a view of some buildings next to a beach">
+</div>
+</div>
+<div class="controls">
+  <button onclick="prevSlide()">Previous</button>
+  <button onclick="nextSlide()">Next</button>
+</div>
+    
+</section>
+<div class="gff_link">
+      <a href="https://www.shetlandarts.org/festivals/screenplay">To visit the Screenplay website click here</a>
+</div>
+
+<!--end of main content-->
+<footer class="site_footer">
+    <!--contact and links to social media-->
+    <div class="foot_address"><p>Scottish Film Festivals</p>
+        <p>Scotland Road</p>
+        <p>Scotland</p>
+    </div>
+    <div class="foot_contact"><p>Phone: 01417771234</p>
+        <p>Email: contact@scottishfilmfestivals.com</p>
+    </div>
+    <div class="copyright"><p>All Content &copy; Scottish Film Festivals 2025</p></div>
+    <div class="socials">
+         <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+         <a href="https://www.facebook.com/" target="blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+         <a href="https://x.com/?lang=en-gb" target="blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('dropdownToggle');
+    const menu = document.getElementById('dropdownMenu');
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        menu.classList.toggle('show');
+      });
+
+      window.addEventListener('click', function (event) {
+        if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+          menu.classList.remove('show');
+        }
+      });
+    }
+  });
+</script>
+
+
+<script>
+  let index = 0;
+  const slides = document.getElementById('slides');
+  const totalSlides = slides.children.length;
+
+  function showSlide() {
+    const slideWidth = slides.children[0].offsetWidth;
+    slides.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
+
+  function nextSlide() {
+    index = (index + 1) % totalSlides;
+    showSlide();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + totalSlides) % totalSlides;
+    showSlide();
+  }
+  
+</script>
+
+
+</body>
+</html>

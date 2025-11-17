@@ -1,0 +1,169 @@
+<!--font - a sans serif font has been used as they are cleaner and simplier fonts making them easier to read on screen
+and therefore more accessible (in particular for people with visual impairments or dyslexia)
+Logo created with Canva
+Colour inspo - https://colorhunt.co/ website that provides colour palettes
+Javascript on navigation button Shows the dropdown menu when the button is clicked.
+Hides it when the user clicks outside.
+Works well for mobile and touch devices where hover isn't reliable
+a)	A summary of your web site (in one paragraph), highlighting the applications used to create it and details of any additional features that were added to it.  
+b)	Information on how accessibility was implemented.
+c)	Information on how security was considered/implemented.
+d)	Information on how you would enhance it in the future
+•	Table added to b.  List added to c.   Form added to f.  
+•	All pages include text. 
+•	Audio added to g.  Images added to a, b and e.  Video added to b. 
+•	External style sheet style.css used on all pages except f and g.
+•	Internal style, internal.css, used on f. 
+•	JavaScript added in f and g to include a slide show and display current date.
+•	Documentation added in g.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/035bc74572.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--including navigation and logo-->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="website logo">
+        </div>
+        <div class="header_text">
+            <h1>Scottish Film Festivals</h1>
+        </div>      
+    
+<div class="dropdown">
+  <button class="dropbtn" id="dropdownToggle">Menu</button>
+      <div class="dropdown_content" id="dropdownMenu">
+        <a href="index.html">Home</a>
+        <a href="glasgow.html">Glasgow</a>
+        <a href="edinburgh.html">Edinburgh</a>
+        <a href="shetland.html">Shetland</a>
+        <a href="hippfest.html">Hippfest</a>
+        <a href="hebrides.html">Hebrides</a>
+        <a href="contact.html">Contact Us</a>
+        
+      </div>
+</div>
+    </header>
+<section class="main">
+<!--start of main section-->
+<h2>Summary of website</h2>
+<p>This website showcases some of Scotland's film festivals. 
+It provides information on some of famous and less well-known festivals across the country.
+Each festival has a dedicated page, and there is a contact page, as well as the info page you 
+are currently reading which gives an overview of the website and well as pointing to where each 
+of the assessment criteria are met.</p>
+<h2>Accessibility</h2>
+<p>A sans serif font has been used and a colour scheme that allows for contrast e.g. between 
+text and background colour. All images have been given alternative text. Drop down navigation has 
+been used. All images and videos have been optimised. Media queries have been used to make the site 
+accessible on various devices.</p>
+<h2>Security</h2>
+<p>Security was addressed by ensuring the site uses HTTPS for encrypted communication, 
+    preventing data from being intercepted. Form inputs were designed with HTML5 validation 
+    to reduce incorrect or harmful entries, and no sensitive information is stored in the HTML. 
+    External links include rel="noopener noreferrer" to prevent clickjacking, and file permissions 
+    on the server are set correctly to avoid unauthorized changes. Strong passwords are used for 
+    hosting and FTP access. These measures help protect user data and maintain the integrity of the website.</p>
+<h2>Improvments</h2>
+<p>The website could be improved by making the navigation more user friendly for smaller screens, i.e. mobile phones.
+    A CAPTCHA could be added to the form. A blog or news section could be added as well as an interactive map with
+    festival locations.
+</p>
+<br>
+<h2>Assessment criteria</h2>
+<table>
+    <tr>
+        <th>Criteria</th>
+        <th>Description</th>
+        <th>Location</th>
+    </tr>
+    <tr>
+        <td>Content</td>
+        <td>Index and 6 other pages (Home, Glasgow, Edinburgh, Shetland, Hippfest, 
+            Hebrides, Contact Us, and Info page)</td>
+        <td>All pages accessed via navigation button</td>
+    </tr>
+    <tr>
+        <td>Text, image, video, audio</td>
+        <td>Text, logo image and other images throughout, video on Hippfest page</td>
+        <td>Text througout, logo image on header, images on all pages apart from Hippfest page which has a video</td>
+    </tr>
+    <tr>
+        <td>Table</td>
+        <td>Assessment criteria table</td>
+        <td>Info page</td>
+    </tr>
+    <tr>
+        <td>List</td>
+        <td>Film catergories included in festival</td>
+        <td>Hebrides</td>
+    </tr>
+     <tr>
+        <td>Form with 5 elements</td>
+        <td>Form with input for name, email, date, message, and submit button</td>
+        <td>Contact Us page</td>
+    </tr>
+       <tr>
+        <td>CSS</td>
+        <td>External and internal</td>
+        <td>External used in all pages. Internal used on Hebrides page for list, on Contact Us and Confirm pages for
+            background colour and styling of input field on form.
+        </td>
+    </tr>
+    </tr>
+       <tr>
+        <td>Javascript</td>
+        <td>Control of drowndown menu, image slider</td>
+        <td>Drop down menu on all pages, image slider on Edinburgh, Shetland, and Hebrides page</td>
+    </tr>
+</table> 
+</section>
+<!--end of main content-->
+<footer class="site_footer">
+    <!--contact and links to social media-->
+    <div class="foot_address"><p>Scottish Film Festivals</p>
+        <p>Scotland Road</p>
+        <p>Scotland</p>
+    </div>
+    <div class="foot_contact"><p>Phone: 01417771234</p>
+        <p>Email: contact@scottishfilmfestivals.com</p>
+    </div>
+    <div class="copyright"><p>All Content &copy; Scottish Film Festivals 2025</p></div>
+    <div class="socials">
+         <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+         <a href="https://www.facebook.com/" target="blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+         <a href="https://x.com/?lang=en-gb" target="blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('dropdownToggle');
+    const menu = document.getElementById('dropdownMenu');
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        menu.classList.toggle('show');
+      });
+
+      window.addEventListener('click', function (event) {
+        if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+          menu.classList.remove('show');
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

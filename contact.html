@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/035bc74572.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--including navagation and logo-->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="website logo">
+        </div>
+        <div class="header_text">
+            <h1>Scottish Film Festivals</h1>
+        </div>      
+    
+<div class="dropdown">
+  <button class="dropbtn" id="dropdownToggle">Menu</button>
+      <div class="dropdown_content" id="dropdownMenu">
+        <a href="index.html">Home</a>
+        <a href="glasgow.html">Glasgow</a>
+        <a href="edinburgh.html">Edinburgh</a>
+        <a href="shetland.html">Shetland</a>
+        <a href="hippfest.html">Hippfest</a>
+        <a href="hebrides.html">Hebrides</a>
+        <a href="info.html">Info</a>
+      </div>
+</div>
+    </header>
+        <!--start of contact content-->
+<div style="background:#72BAA9; padding:40px;">
+        <h1>Contact</h1>
+        <br>
+        <p>For any enquiries or to feature your film festival on this website please
+            complete the form below and a member of our team will be in touch.</p>
+        <br>
+        
+            <form name="enquiry" action="confirm.html" method="get"
+            style="display:flex; flex-direction:column; align-items:center; gap:15px; max-width:400px; 
+            margin:0 auto; background:#72BAA9; padding:20px; border:4px solid style=display:block; font-weight:bold;">
+
+            <label style="display:block; font-weight:bold;">Name</label>
+            <input type="text" placeholder="Enter your name" style="width:50%; padding:10px;">
+    
+            <label style="display:block; font-weight:bold;">Email</label>
+            <input type="email" placeholder="Enter your email" style="width:50%; padding:10px;">
+    
+            <label style="display:block; font-weight:bold;">Date</label>
+            <input type="date" style="width:50%; padding:10px;">
+
+            
+            <label style="display:block; font-weight:bold;">Enquiry details</label>
+            <textarea name="message" placeholder="Enter your message"
+            style="width:80%; max-width:300px; height:100px; padding:10px; resize:vertical;"></textarea>
+
+            <input type="submit" value="Submit"
+            style="background:#474E93; color:#fff; padding:12px 24px; font-size:16px; 
+            border:none; border-radius:6px; cursor:pointer;">
+
+            </form>
+</div>
+
+        <!--end of contact content-->
+        <footer class="site_footer">
+    <!--contact and links to social media-->
+    <div class="foot_address"><p>Scottish Film Festivals</p>
+        <p>Scotland Road</p>
+        <p>Scotland</p>
+    </div>
+    <div class="foot_contact"><p>Phone: 01417771234</p>
+        <p>Email: contact@scottishfilmfestivals.com</p>
+    </div>
+    <div class="copyright"><p>All Content &copy; Scottish Film Festivals 2025</p></div>
+    <div class="socials">
+         <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+         <a href="https://www.facebook.com/" target="blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+         <a href="https://x.com/?lang=en-gb" target="blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('dropdownToggle');
+    const menu = document.getElementById('dropdownMenu');
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        menu.classList.toggle('show');
+      });
+
+      window.addEventListener('click', function (event) {
+        if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+          menu.classList.remove('show');
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>
